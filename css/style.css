@@ -1,0 +1,285 @@
+/* 全局样式  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* 一区样式 */
+.s1{
+    width: 100%;
+    height: 90vh;
+    background: #B2C5CC;
+    overflow: hidden;
+}
+.s1 .phone-nav{
+    display: none;
+}
+.s1 .menu{
+    display: none;
+}
+.s1 .pad-nav{
+    width: 60%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.s1 .pad-nav a{
+    color: #757575;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    transition: color 0.4s;
+}
+.s1 .pad-nav:hover > a{
+    color: #757575;
+}
+.s1 .pad-nav a:hover{
+    color: #afafaf;
+}
+/* .s1 .pad-nav a:nth-of-type(1){
+    color: #afafaf;
+} */
+.s1 .pad-nav .active {
+    color: #afafaf;
+}
+.s1 .s1-img{
+    width: 12%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.s1 .s1-img img{
+    width: 100%;
+}
+.s1 p{
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+.s1 .button{
+    width: 10%;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.s1 .button button{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    background: white;
+    letter-spacing: 0.2rem;
+    font-weight: lighter;
+    color: #757575;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.s1 .button button:hover {
+    background-color: #afafaf;
+}
+/* 导航项的 “前端” 样式变化不会处理？？ */
+
+/* 二区样式 */
+.s2{
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bababa;
+    box-sizing: border-box;
+}
+.s2 div{
+    flex: 1;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: #bababa;
+    transition: color .5s;
+    cursor: pointer;
+}
+.s2 div:hover{
+    color: #545454;
+}
+
+/* 三区样式  */
+
+.s3{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.s3 h1{
+    width: 30%;
+    height: 40vh;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 65vh;
+    font-size: 2rem;
+    color: #757575;
+    font-weight: lighter;
+}
+.s3 p{
+    width: 50%;
+    margin: 0 auto;
+    color: #bababa;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+/* 四区样式 */
+
+.s4{
+    width: 100%;
+    height: 10vh;
+    background: rgb(219, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.s4 p:nth-of-type(1){
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.s4 p:nth-of-type(4){
+    font-weight: lighter;
+}
+.s4 p:nth-of-type(4) b{
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* 五区样式  */
+
+.s5{
+    width: 100%;
+    height: 600;
+    /* overflow: hidden; */
+    background-image: url(../image/bg.jpg);
+    background-size: 100% 100%;
+}
+.s5 p{
+    width: 90%;
+    height: 15vh;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+.s5 .img-groups{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.s5 .img-groups div{
+    width: 30%;
+    height: 300px;
+    padding: 10px;
+    overflow: hidden;
+}
+.s5 .img-groups div img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+.s5 .img-groups div img:hover {
+    transform: scale(1.2);
+}
+/* 这组图片缩放起来会压扁，怎么处理呢？ */
+
+/* footer样式 */
+footer{
+    width: 100%;
+    height: 10vh;
+    background: rgb(219, 216, 216);
+    text-align: center;
+    line-height: 10vh;
+    font-weight: lighter;
+}
+
+
+
+@media screen and (max-width: 800px){
+    .s1 .s1-img{
+        width: 30%;
+    }
+    .s1 .button{
+        width: 20%;
+    }
+    .s5 .img-groups div{
+        width: 40%;  
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .s1 .pad-nav{
+        display: none;
+    }
+    .s1 .phone-nav{
+        display: inline-block;
+        width: 100%;
+        height: 10vh;
+        background: #7EA6B1;
+    }
+    .s1 .phone-nav p{
+        line-height: 10vh;
+    }
+    .s1 .phone-nav .phone-nav-click{
+        width: 13px;
+        height: 13px;
+        border: 2px solid #B2C5CC;
+        /* #B2C5CC */
+        position: absolute;
+        right: 10%;
+        top: 4%;
+    }
+    .s1 .menu{
+        display: block;
+        height: 0vh;
+        overflow: hidden;
+        transition: height 1s;
+    }
+    .s1 .menu .menu-op{
+        width: 100%;
+        height: 5vh;
+        background: #7EA6B1;
+        box-sizing: border-box;
+        border-bottom: 1px solid #B2C5CC;
+        text-align: center;
+        line-height: 5vh;
+        color: white;
+        font-weight: lighter;
+    }
+    .s2 div{
+        font-size: 1em;
+    }
+    .s3 p{
+        font-size: 0.5em;
+    }
+    .s4{
+        display: flex;
+        flex-direction: column;
+    }
+    .s4 p:nth-last-of-type(1),
+    .s4 p:nth-last-of-type(4){
+        flex: 2;
+    }
+    .s4 p:nth-last-of-type(2),
+    .s4 p:nth-last-of-type(3){
+        flex: 0;
+    }
+}
